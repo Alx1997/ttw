@@ -1,0 +1,17 @@
+<div th:fragment="header">
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">Translate The Word</div>
+
+            <nav class="nav">
+                <a class="nav__link" href="/dictionary">My dictionary</a>
+                <a class="nav__link" href="/test">Test</a>
+                <form class="signout" th:action="@{/logout}" method="post">
+                    <input class="nav__link signout__link" type="submit" value="Sign Out"/>
+                </form>
+            </nav>
+        </div>
+    </div>
+</header>
+</div>

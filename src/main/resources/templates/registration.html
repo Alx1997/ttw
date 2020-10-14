@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+<div class="first_block">
+    <h1 class="logo logo--r">Translate The Word</h1>
+    <h1 class="add">Add new user</h1>
+<form class="form_reg" th:action="@{/registration}" method="post">
+    <div class="reg_inner"> User Name : <input class="reg_input" type="text" name="username"/></div>
+    <div class="reg_inner"> Password: <input class="reg_input" type="password" name="password"/></div>
+    <div class = "reg_btn" ><input class="btn btn--reg" type="submit" value="Register"/> </div>
+</form>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+
+<div class="dictionary_block">
+
+    <h1 class="title__d">My dictionary </i>
+    </h1>
+    <div class="editsf">
+    <form class = "filter filter--edit" method ="post" action="/dictionary/filter">
+        <input class = "filter_inner filter_in--edit" type="text" name="text">
+        <button class = "btn btn--search btn_edit" type="submit">Search</button>
+    </form>
+  
+        <div class="dict_edit" th:each="el : ${post}" >
+            <form class="form_edit" th:action="@{'/dictionary/'+${el.id}+'/edit'}" method="post">
+                <input class="edit_inner edit_innerfirst" type="text" th:value="${el.engword}" name="engword" placeholder="edit">
+                <input class="edit_inner" type="text" th:value="${el.rusword}" name="rusword" >
+                <a th:href="'../../dictionary/'+${el.id}+'/remove'" class = "btn edit_btn"><i class="far fa-trash-alt"></i></a>
+
+
+                <button class = "btn edit_btn" type="submit"><i class="far fa-save"></i></button>
+            </form>
+        </div>
+    </div>
+        <div class="block">
+            <div class="dict_inner" th:each="el, state : ${posts}" >
+                <span th:text=" ${state.index} + 1 + '.'"/> <span th:text="${el.engword}"/>
+                 <span th:text="${el.rusword}"/>
+                <a th:href="'../../dictionary/'+${el.id}+'/edit'"><i class="edit far fa-edit"></i></a>
+        
+            </div>
+        </div>
+        <a href="../../dictionary/addword" class="btn btn_add"><i class="fas fa-plus"></i>Add word</a>
+    </div>
+
+
+
+
+</body>
+</html>

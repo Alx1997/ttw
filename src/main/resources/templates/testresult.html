@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style_test.css">
+    <link rel="stylesheet" href="../../css/style_testword.css">
+    <style>table th, table td {padding: 5px;}</style>
+
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+
+<div class="dictionary_block">
+<div class="result_block">
+<div th:if="${radio}" class="block" id="block">
+<table >
+    <tr>
+        <th>Word</th>
+        <th>Your translation</th>
+        <th>Correct translation</th>
+        <th>Result</th>
+    </tr>
+
+        <tr  th:each="el : ${testresult}" class="table_inner"> 
+            <td th:utext="${el.engword}">
+            Word
+            </td>  
+
+            <td th:utext="${el.translate}">
+                Your translation
+            </td>
+            
+            <td th:utext="${el.rusword}">
+                Correct translation
+            </td>
+            
+            <td th:if="${el.result}">
+                Correct!
+            </td>
+            <td th:unless="${el.result}">Try again!</td>
+        </tr>
+
+</table>
+</div>
+
+<div th:unless="${radio}" class="block" id="block" >
+    <table >
+        <tr>
+            <th>Word</th>
+            <th>Your translation</th>
+            <th>Correct translation</th>
+            <th>Result</th>
+        </tr>
+    
+        <tr  th:each="el : ${testresult}" class="table_inner"> 
+
+            <td th:utext="${el.rusword}">
+                Correct translation
+            </td>
+        
+            <td th:utext="${el.translate}">
+                Your translation
+            </td>
+            
+            <td th:utext="${el.engword}">
+                Word
+            </td>  
+            
+            <td th:if="${el.result}">
+                Correct!
+            </td>
+            <td th:unless="${el.result}">Try again!</td>
+        </tr>
+    </table>
+    </div>
+</div>
+<script src="../../javascript/testresult.js"> </script>
+    <!-- </div>  -->
+</div>
+
+
+
+</body>
+</html>
+
+

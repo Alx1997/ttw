@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.logo{
+    font-family: 'Tinos', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: aquamarine;
+    font-size: 105px;
+}
+
+input{
+    padding: 0px 20px;
+}
+
+h1{
+    margin: 0px 0px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header{
+    padding: 30px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.header__logo{
+font-family: 'Tinos', cursive;
+font-style: italic;
+font-size: 40px;
+font-weight: 700;
+color: aquamarine;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link{
+font-family: 'Tinos', cursive;
+font-style: italic;
+font-weight: 700;
+text-decoration: none;
+color: beige;
+font-size: 25px;
+margin-left: 30px ;
+}
+
+.signout__link{
+cursor: pointer;
+border: 0px;
+background: 0px;
+padding: 0px 0px;
+}
+
+.signout__link:focus{
+outline: none;
+
+}
+
+.signout{
+display: flex;
+}
+
+
+.first_block{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../png/background.jpg") center no-repeat;
+
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.dictionary_block{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../png/background.jpg") center no-repeat;
+
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.formt{
+width: 80%;
+}
+
+.form{
+    width: 100%;
+display: flex;
+justify-content: space-between;
+margin-bottom: 30px;
+}
+
+.form_item{
+    width: 50%;
+    text-align: center;
+}
+
+.label{
+    color: blanchedalmond;
+    font-family: 'Tinos', serif;
+    font-weight: 500;
+    font-size: 25px;
+}
+.input{
+    display: block;
+    width: 89%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+
+.input:focus{
+outline: none;
+}
+
+.title{
+    font-family: 'Tinos', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: beige;
+    font-size: 105px;
+}
+
+.title__d{
+    margin-top: 90px;
+    font-family: 'Tinos', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: beige;
+    font-size: 80px;  
+}
+
+.btn{
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 40px;
+    border: 0px;
+    border-radius: 20px;
+    font-family: 'Tinos', serif;
+    font-size: 20px;
+    color: azure;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: brown;
+}
+
+.btn:focus{
+outline: none;
+}
+
+.btn:hover{
+    background-color: rgb(100, 28, 28);
+
+}
+
+.second_block{
+
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../png/background.jpg") center no-repeat;
+
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.dict_inner{
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: 500;
+    color: cornsilk;
+    align-items: center;
+}
+
+
+
+.block{
+    max-height: 500px;
+    margin-top: 5px;
+    height: 100%;
+    width: 470px;
+    background: none;
+    overflow-y: scroll;
+}
+
+.overflow {
+  min-height: 400px;
+}
+
+.block::-webkit-scrollbar {
+  width: 10px;
+}
+
+.block::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+.block::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
+.filter{
+  display: flex;
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.btn--search{
+    width: 20%;
+    font-size: 16px;
+    padding: 8px 0px;
+    border-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.filter_inner{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 19px;
+    padding-left: 15px;
+    width:80%
+}
+
+.filter_inner:focus{
+outline: none;
+}
+
+.edit{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.dict_edit{
+    width: 500px;
+}
+
+.form_edit{
+    width: 100%;
+    display: flex;
+}
+
+.edit_inner{
+    border: 0px;
+    width: 38%;
+    border-top: 1px solid brown;
+    border-left: 1px solid brown;
+}
+
+.edit_inner:focus{
+
+outline: none;
+}
+
+.edit_innerfirst{
+    border-left: 0;
+    border-bottom-left-radius: 20px;
+}
+
+.edit_btn{
+    line-height: 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.233);
+    border-right: 1px solid rgba(255, 255, 255, 0.233);
+border-radius: 0px;
+width: 11%;
+padding: 5px 0px;
+}
+
+.edit_btn:last-child{
+border-bottom-right-radius: 20px;
+border-right: 0px;
+}
+
+.filter--edit{
+margin-bottom: 0px;
+width: 500px;
+}
+
+.filter_in--edit{
+    border-bottom-left-radius: 0px;
+        border: none;
+    width: 78%;
+
+}
+
+.btn_edit{
+    border-bottom-right-radius: 0px;
+    width:20%;
+}
+
+.editsf{
+width: 500px;
+height: 68px;
+}
+
+.btn_add{
+    padding: 2px 60px;
+    margin-bottom: 10px;
+    text-transform: none;
+    font-size: 15px;
+}
+
+.btn--add{
+width: 22%;
+}
+
+.form_reg{
+width:30%;
+}
+
+.reg_inner{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    font-size: 20px;
+}
+
+.reg_input{
+width:60%;
+}
+
+.reg_btn{
+margin-top:30px;
+display: flex;
+justify-content: space-between;
+}
+
+.logo--r{
+font-size:70px;
+position: absolute;
+top: 50px;
+}
+
+.btn--reg{
+margin-top: 10px;
+    width: 40%;
+    padding: 10px 26px;
+}
+
+.add{
+margin-bottom: 20px;
+color: white;
+    font-family: 'Tinos', serif;
+    font-size:30px;
+    font-style: italic;
+}
