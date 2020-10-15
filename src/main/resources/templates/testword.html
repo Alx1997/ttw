@@ -27,8 +27,8 @@
     <form class="test_control" method="post"  th:action="@{/testword}">
 
         <div class="test_item test_item--hidden" id="test_item" th:each="el, state : ${posts}" th:id="'item_' + ${state.index}">
-                <input th:if="${radio}" class="input_word" type="text" th:value="${state.index} + 1 +': ' + ${el.engword}" disabled>
-                <input th:unless="${radio}" class="input_word" type="text" th:value="${state.index} + 1 +': ' + ${el.rusword}" disabled>
+                <input th:if="${radio}" class="input_word" type="text" th:value="${state.index} + 1 + ': ' + ${el.engword}" disabled>
+                <input th:unless="${radio}" class="input_word" type="text" th:value="${state.index} + 1 + ': ' + ${el.rusword}" disabled>
                 <input class="input_word" type="text" name="translation">
         </div>
         <div class="btn_submit">

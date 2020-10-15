@@ -38,14 +38,17 @@
             </form>
         </div>
     </div>
-        <div class="block">
-            <div class="dict_inner" th:each="el, state : ${posts}" >
-                <span th:text=" ${state.index} + 1 + '.'"/> <span th:text="${el.engword}"/>
-                 <span th:text="${el.rusword}"/>
-                <a th:href="'../../dictionary/'+${el.id}+'/edit'"><i class="edit far fa-edit"></i></a>
-        
-            </div>
-        </div>
+    <div class="block">
+        <table class="tabledict">
+            <tr class="dict_inner" th:each="el, state : ${posts}">
+                <td th:utext=" ${state.index} + 1 + '.'">qqq</td>
+                <td th:utext="${el.engword}">qqq</td>
+                <td th:utext="${el.rusword}">qqq</td>
+                <td><a th:href="'../dictionary/'+${el.id}+'/edit'"><i class="edit far fa-edit"></i></a></td>
+            </tr>
+
+        </table>
+    </div>
         <a href="../../dictionary/addword" class="btn btn_add"><i class="fas fa-plus"></i>Add word</a>
     </div>
 

@@ -12,21 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
-    @Autowired
-    private DictionaryRepository dictionaryRepository;
 
     @GetMapping("/")
-    public String greeting(Model model) {
+    public String main(Model model) {
         return "ttw";
     }
 
-
-    @GetMapping("/dictionary/addword")
-    public String addword(@AuthenticationPrincipal User user, Model model) {
-
-        Iterable<Dictionary> dict = dictionaryRepository.findByAuthor(user);
-        model.addAttribute("posts", dict);
-        return "addword";
-    }
 }
 

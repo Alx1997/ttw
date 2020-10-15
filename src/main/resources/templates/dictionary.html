@@ -15,8 +15,6 @@
 <body>
 
 <header th:insert="blocks/header :: header"></header>
-
-
 <div class="dictionary_block">
 
     <h1 class="title__d">My dictionary </i>
@@ -25,48 +23,22 @@
         <input class = "filter_inner" type="text" name="text">
         <button class = "btn btn--search" type="submit">Search</button>
     </form>
+
+
     <div class="block">
-
-        <table >
-
-            <tr  th:each="el,  state : ${posts}" class="dict_inner table_inner">
-
-                <td th:utext="${state.index}">
-                    Correct translation
-                </td>
-
-                <td th:utext="${el.engword}">
-                    Your translation
-                </td>
-
-                <td th:utext="${el.rusword}">
-                    Word
-                </td>
-
-                <td>
-                    <a th:href="'../dictionary/'+${el.id}+'/edit'"><i class="edit far fa-edit"></i></a>
-                </td>
+        <table class="tabledict">
+            <tr class="dict_inner" th:each="el, state : ${posts}">
+                <td th:utext=" ${state.index} + 1 + '.'">qqq</td>
+                <td th:utext="${el.engword}">qqq</td>
+                <td th:utext="${el.rusword}">qqq</td>
+                <td><a th:href="'../dictionary/'+${el.id}+'/edit'"><i class="edit far fa-edit"></i></a></td>
             </tr>
+
         </table>
-<!--        <table>-->
-<!--            <tr class="dict_inner" th:each="el, state : ${posts} class="dict_inner">-->
-<!--            <td th:utext="${state.index}"> </td>-->
-
-<!--            <td th:utext="${el.engword}"></td>-->
-<!--            <td th:utext="${el.rusword}"></td>-->
-<!--            <td>-->
-<!--                <a th:href="'../dictionary/'+${el.id}+'/edit'"><i class="edit far fa-edit"></i></a>-->
-<!--            </td>-->
-<!--            </tr>-->
-
-<!--        </table>-->
-
-
-
+    </div>
+    <a href="../dictionary/addword" class="btn btn_add"><i class="fas fa-plus"></i>Add word</a>
 
 </div>
-
-
 
 </body>
 </html>

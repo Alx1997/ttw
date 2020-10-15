@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import com.google.common.collect.Lists;
 import java.util.ArrayList;
 
 import java.util.Optional;
@@ -19,6 +20,14 @@ import java.util.Optional;
 public class WordController {
     @Autowired
     private DictionaryRepository dictionaryRepository;
+
+    @GetMapping("/dictionary/addword")
+    public String addword(@AuthenticationPrincipal User user, Model model) {
+
+        Iterable<Dictionary> dict = dictionaryRepository.findByAuthor(user);
+        model.addAttribute("posts", dict);
+        return "addword";
+    }
 
     @PostMapping("/dictionary/addword")
     public String blogPostAdd(@AuthenticationPrincipal User user, @RequestParam String engword, @RequestParam String rusword, Model model){
