@@ -1,4 +1,4 @@
-package com.translatetheword.translatetheword.models;
+package com.translatetheword.models;
 
 public class Test {
     private String engword, rusword, translate;

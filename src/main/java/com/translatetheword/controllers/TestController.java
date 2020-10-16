@@ -1,9 +1,9 @@
-package com.translatetheword.translatetheword.controllers;
+package com.translatetheword.controllers;
 
-import com.translatetheword.translatetheword.models.Dictionary;
-import com.translatetheword.translatetheword.models.Test;
-import com.translatetheword.translatetheword.models.User;
-import com.translatetheword.translatetheword.repo.DictionaryRepository;
+import com.translatetheword.models.Dictionary;
+import com.translatetheword.models.Test;
+import com.translatetheword.models.User;
+import com.translatetheword.repo.DictionaryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;

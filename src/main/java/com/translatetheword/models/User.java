@@ -1,4 +1,4 @@
-package com.translatetheword.translatetheword.models;
+package com.translatetheword.models;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -225,8 +225,7 @@ outline: none;
 
 .block{
     max-height: 500px;
-    margin-top: 5px;
-    margin-bottom: 18px;
+
 
     height: 100%;
     width: 470px;
@@ -256,7 +255,7 @@ outline: none;
 .filter{
   display: flex;
   width: 500px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .btn--search{
@@ -345,11 +344,14 @@ width: 500px;
 }
 
 .editsf{
+margin-bottom: 15px;
 width: 500px;
 height: 68px;
 }
 
 .btn_add{
+    margin-top: 15px;
+
     padding: 2px 60px;
     margin-bottom: 10px;
     text-transform: none;

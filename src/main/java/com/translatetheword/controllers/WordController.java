@@ -1,8 +1,8 @@
-package com.translatetheword.translatetheword.controllers;
+package com.translatetheword.controllers;
 
-import com.translatetheword.translatetheword.models.Dictionary;
-import com.translatetheword.translatetheword.models.User;
-import com.translatetheword.translatetheword.repo.DictionaryRepository;
+import com.translatetheword.models.Dictionary;
+import com.translatetheword.repo.DictionaryRepository;
+import com.translatetheword.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.google.common.collect.Lists;
+
 import java.util.ArrayList;
 
 import java.util.Optional;

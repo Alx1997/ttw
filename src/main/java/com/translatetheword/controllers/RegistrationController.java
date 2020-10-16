@@ -1,9 +1,9 @@
-package com.translatetheword.translatetheword.controllers;
+package com.translatetheword.controllers;
 
 
-import com.translatetheword.translatetheword.models.Role;
-import com.translatetheword.translatetheword.models.User;
-import com.translatetheword.translatetheword.repo.UserRepo;
+import com.translatetheword.models.Role;
+import com.translatetheword.models.User;
+import com.translatetheword.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

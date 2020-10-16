@@ -1,4 +1,4 @@
-package com.translatetheword.translatetheword;
+package com.translatetheword;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

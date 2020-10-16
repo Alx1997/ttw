@@ -1,7 +1,7 @@
-package com.translatetheword.translatetheword.repo;
+package com.translatetheword.repo;
 
-import com.translatetheword.translatetheword.models.Dictionary;
-import com.translatetheword.translatetheword.models.User;
+import com.translatetheword.models.Dictionary;
+import com.translatetheword.models.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.ArrayList;

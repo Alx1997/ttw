@@ -1,4 +1,4 @@
-package com.translatetheword.translatetheword;
+package com.translatetheword;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

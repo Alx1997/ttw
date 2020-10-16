@@ -1,7 +1,7 @@
-package com.translatetheword.translatetheword.securingweb;
+package com.translatetheword.securingweb;
 
 
-import com.translatetheword.translatetheword.service.UserService;
+import com.translatetheword.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

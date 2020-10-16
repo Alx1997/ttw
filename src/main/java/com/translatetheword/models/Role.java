@@ -1,4 +1,4 @@
-package com.translatetheword.translatetheword.models;
+package com.translatetheword.models;
 import org.springframework.security.core.GrantedAuthority;
 
 public enum Role implements GrantedAuthority {

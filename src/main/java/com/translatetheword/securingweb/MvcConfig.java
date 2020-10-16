@@ -1,4 +1,4 @@
-package com.translatetheword.translatetheword.securingweb;
+package com.translatetheword.securingweb;
 
 
 import org.springframework.context.annotation.Configuration;
